@@ -6,8 +6,8 @@ import MailIcon from '@mui/icons-material/Mail';
 
 function Hero() {
 
-    const StyledHero = styled("div")(()=> ({
-        backgroundColor: "black",
+    const StyledHero = styled("div")(({theme})=> ({
+        backgroundColor: theme.palette.primary.main,
         height: "100vh"
     }))
 
@@ -31,19 +31,19 @@ function Hero() {
 
                         <Grid2 size={8}>
                             
-                            <Typography variant="h1" textAlign="center" color="primary"> Rafael Soares de Paula Filho </Typography>
-                            <Typography variant="h2" textAlign="center" color="primary"> Desenvolvedor </Typography>
+                            <Typography variant="h1" textAlign="center" color="primary.contrastText"> Rafael Soares de Paula Filho </Typography>
+                            <Typography variant="h2" textAlign="center" color="primary.contrastText"> Desenvolvedor </Typography>
                                                         
                             {/* Botões */}
                             <Grid2 container display="flex" justifyContent="center">
                                 {/* Botão Download */}
                                 <Grid2 size={{ xs:12, md:4 }} display="flex" justifyContent="center">
-                                    <Button><DownloadIcon/>Download CV</Button>
+                                    <Button color="secondary" variant="outlined" ><DownloadIcon/>Download CV</Button>
                                 </Grid2>
 
                                 {/* Botão Email */}
                                 <Grid2 size={{ xs:12, md:4 }} display="flex" justifyContent="center">
-                                    <Button><MailIcon/>Entre em contato</Button>
+                                    <Button color="secondary" variant="outlined"><MailIcon/>Entre em contato</Button>
                                 </Grid2>
                             </Grid2>
                         </Grid2>
