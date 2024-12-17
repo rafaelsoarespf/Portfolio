@@ -36,7 +36,7 @@ function Hero() {
                                 <Box position="absolute" width={"150%"} top={-100} right={0}>
                                     <AnimatedBackground/>
                                 </Box>
-                                <Box position="absolute" textAlign="center"><StyledImg src={Avatar}/></Box>
+                                <Box position="relative" textAlign="center"><StyledImg src={Avatar}/></Box>
                             </Box>
                             
                         </Grid2>
