@@ -16,7 +16,7 @@ function Hero() {
         alignItems: "center",
         [theme.breakpoints.up('xs')]: {
             paddingTop: "100px",
-        }
+        },
         [theme.breakpoints.up('md')]: {
             paddingTop: "0px",
         }
@@ -56,13 +56,13 @@ function Hero() {
                             <Grid2 container display="flex" justifyContent="center" spacing={3} paddingTop={3}>
                                 {/* Botão Download */}
                                 <Grid2 size={{ xs:12, md:4 }} display="flex" justifyContent="center">
-                                    <StyledButton><DownloadIcon/><Typography>Download CV</Typography></StyledButton>
+                                    <StyledButton onClick={() => console.log("download")}><DownloadIcon/><Typography>Download CV</Typography></StyledButton>
                                 </Grid2>
 
 
                                 {/* Botão Email */}
                                 <Grid2 size={{ xs:12, md:4 }} display="flex" justifyContent="center">
-                                    <StyledButton><MailIcon/><Typography>Entre em contato</Typography></StyledButton>
+                                    <StyledButton onClick={() => console.log("email")}><MailIcon/><Typography>Entre em contato</Typography></StyledButton>
                                 </Grid2>
                             </Grid2>
                         </Grid2>
