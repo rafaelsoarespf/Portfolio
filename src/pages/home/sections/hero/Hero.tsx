@@ -13,11 +13,17 @@ function Hero() {
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        [theme.breakpoints.up('xs')]: {
+            paddingTop: "100px",
+        }
+        [theme.breakpoints.up('md')]: {
+            paddingTop: "0px",
+        }
     }))
 
     const StyledImg = styled("img")(()=> ({
-        width: "80%",
+        width: "75%",
         borderRadius: "50%",
         border: `1px solid ${theme.palette.primary.contrastText}`
     }))
@@ -44,10 +50,10 @@ function Hero() {
                         <Grid2 size={7}>
                             
                             <Typography variant="h1" textAlign="center" color="primary.contrastText"> Rafael Soares de Paula Filho </Typography>
-                            <Typography variant="h2" textAlign="center" color="primary.contrastText"> Desenvolvedor </Typography>
+                            <Typography variant="h2" textAlign="center" color="primary.contrastText" paddingBottom={2}> Desenvolvedor </Typography>
                                                         
                             {/* Botões */}
-                            <Grid2 container display="flex" justifyContent="center" spacing={3}>
+                            <Grid2 container display="flex" justifyContent="center" spacing={3} paddingTop={3}>
                                 {/* Botão Download */}
                                 <Grid2 size={{ xs:12, md:4 }} display="flex" justifyContent="center">
                                     <StyledButton><DownloadIcon/><Typography>Download CV</Typography></StyledButton>
